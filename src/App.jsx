@@ -42,7 +42,7 @@ function App() {
   )
 }
 
-// Datos de muestra para categoríass
+// Datos de muestra para categoríasss
 const categories = [
   { id: 1, name: "Pizza", image: "/placeholder-pizza.jpg" },
   { id: 2, name: "Hamburguesas", image: "/placeholder-burger.jpg" },
