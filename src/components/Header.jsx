@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
-function Header() {
+function Header({ isLoginPage = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
@@ -51,6 +52,11 @@ function Header() {
                 className="w-full py-2 pl-3 pr-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
               />
             </div>
+            <Link to="/login" className="hidden md:block">
+              <Button color="orange" style={{padding: '2px 8px', fontSize: '0.875rem'}}>
+                Ingresar
+              </Button>
+            </Link>
             <div className="relative cursor-pointer">
               <div className="flex items-center text-red-500 hover:text-red-600 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="stroke-current">
@@ -69,16 +75,18 @@ function Header() {
         </div>
       </header>
 
-      {/* Mobile Search */}
-      <div className="md:hidden container mx-auto px-4 py-3">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Buscar comida..."
-            className="w-full py-2 pl-3 pr-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-          />
+      {/* Mobile Search - Ocultar en la página de login */}
+      {!isLoginPage && (
+        <div className="md:hidden container mx-auto px-4 py-3">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Buscar comida..."
+              className="w-full py-2 pl-3 pr-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Mobile Menu */}
       {isMenuOpen && (
@@ -106,6 +114,9 @@ function Header() {
               <a href="#" className="text-lg font-medium">
                 Mis Pedidos
               </a>
+              <Link to="/login" className="text-lg font-medium text-orange-500">
+                Iniciar Sesión
+              </Link>
             </nav>
           </div>
         </div>
