@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  base: "/app-react", // Set the base URL for your application
+  base: "/foodappReact", // Set the base URL for your application
 })
