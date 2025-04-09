@@ -45,9 +45,9 @@ function PopularItems() {
       <section className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold">Platos Populares</h2>
-          <a href="#" className="text-red-600 font-medium">
+          <Button color="orange" style={{padding: '4px 12px', fontSize: '14px'}}>
             Ver Todos
-          </a>
+          </Button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {popularItems.map((item) => (

@@ -29,12 +29,12 @@ function Header({ isLoginPage = false }) {
 
           {/* Navegación de escritorio */}
           <div className="hidden md:flex items-center justify-center gap-6 mx-auto">
-            <a href="#" className="font-medium">
+            <Link to="/" className="font-medium">
               Inicio
-            </a>
-            <a href="#" className="font-medium">
+            </Link>
+            <Link to="/categories" className="font-medium">
               Categorías
-            </a>
+            </Link>
             <a href="#" className="font-medium">
               Populares
             </a>
@@ -99,12 +99,12 @@ function Header({ isLoginPage = false }) {
               </Button>
             </div>
             <nav className="flex flex-col gap-4">
-              <a href="#" className="text-lg font-medium">
+              <Link to="/" className="text-lg font-medium">
                 Inicio
-              </a>
-              <a href="#" className="text-lg font-medium">
+              </Link>
+              <Link to="/categories" className="text-lg font-medium">
                 Categorías
-              </a>
+              </Link>
               <a href="#" className="text-lg font-medium">
                 Populares
               </a>

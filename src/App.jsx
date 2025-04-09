@@ -7,7 +7,8 @@ import CategorySection from './components/CategorySection'
 import Button from './components/Button'
 import heroImg from './assets/placeholder-hero.jpg'
 import Footer from './components/Footer'
-import LoginPage from './pages/LoginPage'
+import LoginPage from './pages/loginpage'
+import CategoriesPage from './pages/CategoriesPage'
 
 function HomePage() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/" element={
             <>
               <Header />
@@ -59,15 +61,5 @@ function App() {
     </Router>
   )
 }
-
-// Datos de muestra para categoríasss
-const categories = [
-  { id: 1, name: "Pizza", image: "/placeholder-pizza.jpg" },
-  { id: 2, name: "Hamburguesas", image: "/placeholder-burger.jpg" },
-  { id: 3, name: "Sushi", image: "/placeholder-sushi.jpg" },
-  { id: 4, name: "Ensaladas", image: "/placeholder-salad.jpg" },
-  { id: 5, name: "Postres", image: "/placeholder-dessert.jpg" },
-  { id: 6, name: "Bebidas", image: "/placeholder-drinks.jpg" },
-]
 
 export default App
