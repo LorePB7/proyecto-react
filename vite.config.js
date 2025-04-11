@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  base: "https://LorePB7.github.io/foodappReact", // Set the base URL for your application
+  base: "https://lorepb7.github.io/proyecto-react/", // Set the base URL for your application
 })
